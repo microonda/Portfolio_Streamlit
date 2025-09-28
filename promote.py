@@ -395,10 +395,10 @@ linha_2 = pula_linha()
 
 cols = st.columns(4)
 urls = [
-    "C:/codigos/ias/experimentos/Certificado_Batalha_de_Dados.png",
-    "C:/codigos/ias/experimentos/Certificado_Praticioner_Generative_AI.png",
-    "C:/codigos/ias/experimentos/Certificado_Quantum_Computing.png",
-    "C:/codigos/ias/experimentos/Certificado_Business_Analytics.png"
+    "./assets/Certificado_Batalha_de_Dados.png",
+    "./assets/Certificado_Praticioner_Generative_AI.png",
+    "./assets/Certificado_Quantum_Computing.png",
+    "./assets/Certificado_Business_Analytics.png"
 ]
 captions = [
     "Certificado de Evento **Hackaton Batalha de Dados**",
@@ -438,4 +438,5 @@ for col, url, caption in zip(cols, urls, captions):
 col1, col2, col3 = st.columns([1,2,1])
 with col2:
     if st.button("Festejar a finalização do portfólio!"):
+
         st.balloons()
