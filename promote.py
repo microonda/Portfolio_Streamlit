@@ -385,7 +385,7 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-st.write(" ")
+st.write("☢️ Atenção - Botão Experimental - Ainda em desenvolvimento ⚙️")
 
 # Seção de Certificado
 linha_1 = pula_linha()
@@ -440,3 +440,4 @@ with col2:
     if st.button("Festejar a finalização do portfólio!"):
 
         st.balloons()
+
