@@ -311,7 +311,7 @@ with col1:
     st.markdown("""
     - AWS (Glue, S3, Athena)
     - Microsoft Excel & VBA (Avançado)
-    - 
+    - SQL, MySQL e PostgreSQL (integração SQL com Python) 
     """)
 
     st.subheader("📈 Dados & Análises")
@@ -341,15 +341,6 @@ with col2:
 
 st.write("---")
 
-st.header("Habilidades Chave")
-st.markdown("""
-- **Microsoft 365 - Excel
-- **Cloud & Dados:** **AWS**, **PySpark**, **AWS Glue**, S3, Athena
-- **Programação:** **Python**, **SQL**, C, Javascript
-- **IA/ML:** **IA Generativa**, **Transformers**, **RAG**, Modelos Preditivos
-- **Metodologias:** **CI/CD**, **Containerização**, **Resolução de Problemas**
-""")
-
 st.subheader("Experiência Profissional com LLMs")
 st.markdown("""
 - **Modelagem Preditiva:** Utilizei **Machine Learning** com **SAS** e ferramentas de Big Data para prever tendências e comportamentos de mercado.
@@ -361,7 +352,8 @@ st.subheader("Especialização em IA Generativa")
 st.markdown("""
 - **IA Generativa Estratégica:** Apliquei **IA Generativa** para resolver problemas de negócio de forma inovadora. Utilizei a arquitetura **RAG** para permitir que modelos tivessem acesso a dados confidenciais e manuais da empresa, garantindo respostas seguras e precisas.
 - **Desenvolvimento High-code & Low-code:** Tenho experiência prática com linguagens de programação**.
-- Experiência prática na aplicação de **RAG (Retrieval Augmented Generation)** utilizando a **API do modelo GPT**. 
+- Experiência prática na aplicação de **RAG (Retrieval Augmented Generation)** utilizando a **API do modelo GPT 4.0**.
+- Hands-on experience on LangChain scripts and multimodel interfaces implementation (LLama, LLMs, Ollama), open-source models.
 """)
 
 # Seção de Certificado
@@ -417,6 +409,7 @@ with col2:
     if st.button("Festejar a finalização do portfólio!"):
 
         st.balloons()
+
 
 
 
