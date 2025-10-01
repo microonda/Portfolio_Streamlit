@@ -248,20 +248,82 @@ unsafe_allow_html=True
 # )
 
 
-st.write("---") # Linha divisória
 
-st.header("Minha Trajetória em Dados & IA")
+st.write("---")
+
+# Seção: Experiência no Itaú com storytelling
+st.header("🏦 Experiência no Itaú Unibanco")
+
 st.markdown("""
-Minha carreira é focada em aplicar **Machine Learning**, **IA Generativa** e **Análises de dados**.
+Durante meu estágio no Itaú, participei de projetos de **automação**, **engenharia de dados** e criei soluções que melhoraram a **eficiência operacional** da equipe. Abaixo estão alguns indicadores ilustrativos para representar esse impacto.
 """)
 
-st.subheader("Experiência no Itaú Unibanco (Estágio Corporativo)")
-st.markdown("""
-- **Liderança Técnica:** Fui responsável pela **arquitetura de projetos** na **nuvem AWS**, atuando como ponto central para decisões técnicas e implementação.
-- **Engenharia de Dados:** Criei pipelines de dados em **AWS Glue** com **PySpark**, garantindo **escalabilidade** para manipulação de grandes volumes de dados.
-- **ETL**: Análise e tratamento de dados, Relatórios automáticos de dados, Automação, **Macros** (Excel/VBA), Scripts **Bash**, ETL com **Python** e **Pyspark**.
-- **Automação de Processos:** Utilizei Python, Excel e VBA para otimizar fluxos de trabalho, resultando em ganhos de **eficiência operacional**.
-""")
+# KPIs simulados
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.metric("📊 Dados Processados", "25M+", "↑ 18%")
+with col2:
+    st.metric("⚙️ Processos Automatizados", "15", "↑ 50%")
+with col3:
+    st.metric("⏱️ Tempo Economizado", "120+ horas/mês", "↑ 35%")
+
+# Dados simulados para gráfico
+df = pd.DataFrame({
+    "Mês": ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago"],
+    "Volume de Dados (GB)": [random.randint(50, 120) for _ in range(8)],
+    "Processos Automatizados": [random.randint(1, 5) for _ in range(8)]
+})
+
+# Gráfico de volume de dados
+fig1 = px.bar(df, x="Mês", y="Volume de Dados (GB)", title="Crescimento no Volume de Dados Tratados", color="Volume de Dados (GB)")
+st.plotly_chart(fig1, use_container_width=True)
+
+# Gráfico de processos automatizados
+fig2 = px.line(df, x="Mês", y="Processos Automatizados", title="Automação Mensal de Processos", markers=True)
+st.plotly_chart(fig2, use_container_width=True)
+
+st.write("---")
+
+# Seção: Habilidades técnicas organizadas
+st.header("Habilidades ")
+
+st.markdown("Minhas habilidades estão agrupadas em quatro áreas principais:")
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.subheader("🔧 Infraestrutura Cloud")
+    st.markdown("""
+    - AWS (Glue, S3, Athena)
+    - Microsoft Excel & VBA (Avançado)
+    - 
+    """)
+
+    st.subheader("📈 Dados & Análises")
+    st.markdown("""
+    - Criação de dashboards
+    - Análise, recuperação e tratamento de dados
+    - Relatórios de dados automatizados 
+    """)
+
+with col2:
+    st.subheader("💻 Programação")
+    st.markdown("""
+    - Python
+    - SQL
+    - Javascript
+    - C
+    - PySpark
+    - Bash
+    """)
+
+    st.subheader("🤖 Inteligência Artificial")
+    st.markdown("""
+    - Modelos Preditivos
+    - IA Generativa
+    - Transformers (RAG, etc.)
+    """)
 
 st.write("---")
 
@@ -440,4 +502,5 @@ with col2:
     if st.button("Festejar a finalização do portfólio!"):
 
         st.balloons()
+
 
