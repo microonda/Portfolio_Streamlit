@@ -278,11 +278,11 @@ df = pd.DataFrame({
 })
 
 # Gráfico de volume de dados
-fig1 = px.bar(df, x="Mês", y="Volume de Dados", title="Crescimento no Volume de Dados Tratados", color="Volume de Dados (GB)")
+fig1 = pd.bar(df, x="Mês", y="Volume de Dados", title="Crescimento no Volume de Dados Tratados", color="Volume de Dados (GB)")
 st.plotly_chart(fig1, use_container_width=True)
 
 # Gráfico de processos automatizados
-fig2 = px.line(df, x="Mês", y="Processos Automatizados", title="Automação Mensal de Processos", markers=True)
+fig2 = pd.line(df, x="Mês", y="Processos Automatizados", title="Automação Mensal de Processos", markers=True)
 st.plotly_chart(fig2, use_container_width=True)
 
 st.write("---")
@@ -504,6 +504,7 @@ with col2:
     if st.button("Festejar a finalização do portfólio!"):
 
         st.balloons()
+
 
 
 
