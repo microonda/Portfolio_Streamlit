@@ -364,105 +364,6 @@ st.markdown("""
 - Experiência prática na aplicação de **RAG (Retrieval Augmented Generation)** utilizando a **API do modelo GPT**. 
 """)
 
-
-# Título Principal e Subtítulo
-st.write("---")
-st.markdown("<h1 style='text-align: center; color: #e0e0e0;'>Descubra o Poder da <span style='color: #f7a61d;'>Tecnologia</span></h1>", unsafe_allow_html=True)
-st.markdown("""
-<p style='text-align: center; font-size: 1.2em; color: #999;'>
-    Interaja naturalmente por voz com modelos de linguagem de última geração, sem interrupções.
-</p>""", unsafe_allow_html=True)
-st.write("---")
-
-# Seção de Casos de Uso com Animação
-st.header("Ferramentas principais")
-st.write("Essa plataforma muldimodal interativa facilita a sua forma de interagir com um LLM (Large Language Model).")
-
-use_cases = [
-    {
-        "title": "Geração de Texto",
-        "description": "Crie artigos de blog, e-mails, roteiros e legendas para redes sociais em segundos."
-    },
-    {
-        "title": "Análise e Resumo",
-        "description": "Transforme longos documentos em resumos concisos e fáceis de entender. Ideal para pesquisas, estudos e para economizar tempo."
-    },
-    {
-        "title": "Programação NLP",
-        "description": "Gere trechos de código, explique algoritmos complexos ou debuggue seu código com a ajuda de um assistente inteligente. Mais rápido, mais eficiente."
-    }
-]
-
-
-# Atraso para que a animação seja visível
-delay = 0.2
-for i, case in enumerate(use_cases):
-    col1, col2 = st.columns([1, 4])
-    with col1:
-        st.write("") # Espaço para manter o alinhamento
-    with col2:
-        with st.empty():
-            time.sleep(delay) # Adiciona um pequeno atraso
-            st.markdown(f"""
-                <div class="card slide-in-right">
-                    <h3>{case['title']}</h3>
-                    <p class="card-text">{case['description']}</p>
-                </div>
-            """, unsafe_allow_html=True)
-    delay += 0.2
-
-st.write("---")
-
-# # Seção de Depoimentos para Prova Social e SEO
-# st.header("O que nossos usuários dizem")
-# st.write("Não acredite apenas em nós. Veja o impacto real com dados e certificados.")
-
-# testimonials = [
-#     {
-#         "user": "Ana P.",
-#         "text": "Essa IA me ajudou a criar o roteiro do meu canal no YouTube. Foi incrivelmente rápido e as ideias são super originais. Recomendo muito!"
-#     },
-#     {
-#         "user": "Carlos R.",
-#         "text": "Sou desenvolvedor e uso para tirar dúvidas e otimizar meu código. É como ter um mentor de programação 24/7."
-#     },
-#     {
-#         "user": "Mariana S.",
-#         "text": "Eu uso a ferramenta para resumir artigos científicos para a minha pesquisa. Antes, levava horas. Agora, levo minutos. A interface é super limpa e fácil de usar."
-#     }
-# ]
-
-# for i, testimonial in enumerate(testimonials):
-#     col1, col2 = st.columns([1, 4])
-#     with col1:
-#         st.write("")
-#     with col2:
-#         with st.empty():
-#             time.sleep(delay)
-#             st.markdown(f"""
-#                 <div class="card slide-in-right">
-#                     <p><i>"{testimonial['text']}"</i></p>
-#                     <p style="text-align: right; margin-top: 10px; font-weight: bold;">- {testimonial['user']}</p>
-#                 </div>
-#             """, unsafe_allow_html=True)
-#     delay += 0.2
-
-# Call to Action Final
-st.markdown("<h2 style='text-align: center; color: #e0e0e0;'>Pronto para começar?</h2>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center;'>Clique no botão abaixo para interagir com o modelo e experimentar a interface de IA.</p>", unsafe_allow_html=True)
-# if st.button("Experimentar Agora", use_container_width=True):
-    # st.info("Direcionando para a interface do chatbot...")
-
-st.markdown("""
-<div class="hero" style="display: flex; justify-content: center;">
-    <a href="#demo">
-        <button class="cta-button">✨ Experimente agora</button>
-    </a>
-</div>
-""", unsafe_allow_html=True)
-
-st.write("☢️ Atenção - Botão Experimental - Ainda em desenvolvimento ⚙️")
-
 # Seção de Certificado
 linha_1 = pula_linha()
 st.write("""<h2 style="text-align: center; font-size: 32px"; margin-top: 2em;>Certificados & Badges</h2> """, unsafe_allow_html=True)
@@ -516,6 +417,7 @@ with col2:
     if st.button("Festejar a finalização do portfólio!"):
 
         st.balloons()
+
 
 
 
