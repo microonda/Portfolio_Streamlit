@@ -270,20 +270,32 @@ with col3:
 
 import pandas as pd
 import random
-# Dados simulados para gráfico
+
+st.title("Análise de Vendas por Categoria de Produto")
+
 df = pd.DataFrame({
-    "Mês": ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago"],
-    "Volume de Dados": [random.randint(50, 120) for _ in range(8)],
-    "Processos Automatizados": [random.randint(1, 5) for _ in range(8)]
+    "Produto": ["Smartphone", "Laptop", "Tablet", "Fones de Ouvido", "Câmera Digital", "Smartwatch"],
+    "Janeiro": [random.randint(50, 200) for _ in range(6)],
+    "Fevereiro": [random.randint(50, 200) for _ in range(6)],
+    "Março": [random.randint(50, 200) for _ in range(6)],
+    "Abril": [random.randint(50, 200) for _ in range(6)],
+    "Maio": [random.randint(50, 200) for _ in range(6)],
+    "Junho": [random.randint(50, 200) for _ in range(6)],
 })
 
-# Gráfico de volume de dados
-fig1 = pd.bar(df, x="Mês", y="Volume de Dados", title="Crescimento no Volume de Dados Tratados")
-st.plotly_chart(fig1, use_container_width=True)
+df_vendas = df.set_index("Produto").T
 
-# Gráfico de processos automatizados
-fig2 = pd.line(df, x="Mês", y="Processos Automatizados", title="Automação Mensal de Processos", markers=True)
-st.plotly_chart(fig2, use_container_width=True)
+st.subheader("Volume Total de Vendas por Categoria")
+st.bar_chart(df_vendas)
+
+st.subheader("Tendência Mensal de Vendas por Categoria")
+st.line_chart(df_vendas)
+
+st.subheader("Distribuição Mensal Acumulada das Vendas")
+st.area_chart(df_vendas)
+
+st.subheader("Resumo Estatístico")
+st.dataframe(df_vendas.describe().T.style.format("{:.1f}"))
 
 st.write("---")
 
@@ -504,6 +516,7 @@ with col2:
     if st.button("Festejar a finalização do portfólio!"):
 
         st.balloons()
+
 
 
 
