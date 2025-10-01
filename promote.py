@@ -269,15 +269,16 @@ with col3:
     st.metric("⏱️ Tempo Economizado", "120+ horas/mês", "↑ 35%")
 
 import pandas as pd
+import random
 # Dados simulados para gráfico
 df = pd.DataFrame({
     "Mês": ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago"],
-    "Volume de Dados (GB)": [random.randint(50, 120) for _ in range(8)],
+    "Volume de Dados": [random.randint(50, 120) for _ in range(8)],
     "Processos Automatizados": [random.randint(1, 5) for _ in range(8)]
 })
 
 # Gráfico de volume de dados
-fig1 = px.bar(df, x="Mês", y="Volume de Dados (GB)", title="Crescimento no Volume de Dados Tratados", color="Volume de Dados (GB)")
+fig1 = px.bar(df, x="Mês", y="Volume de Dados", title="Crescimento no Volume de Dados Tratados", color="Volume de Dados (GB)")
 st.plotly_chart(fig1, use_container_width=True)
 
 # Gráfico de processos automatizados
@@ -503,6 +504,7 @@ with col2:
     if st.button("Festejar a finalização do portfólio!"):
 
         st.balloons()
+
 
 
 
