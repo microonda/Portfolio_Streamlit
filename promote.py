@@ -268,6 +268,7 @@ with col2:
 with col3:
     st.metric("⏱️ Tempo Economizado", "120+ horas/mês", "↑ 35%")
 
+import pandas as pd
 # Dados simulados para gráfico
 df = pd.DataFrame({
     "Mês": ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago"],
@@ -502,5 +503,6 @@ with col2:
     if st.button("Festejar a finalização do portfólio!"):
 
         st.balloons()
+
 
 
