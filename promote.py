@@ -113,41 +113,6 @@ st.markdown("""
 
 # Trajetória em dados
 
-# st.markdown(""" 
-# <section class="section-container" id="trajetoria">
-#     <h2 class="section-title">Minha Trajetória em Dados & IA</h2>
-#     <p class="section-lead">
-#         Minha carreira é focada em aplicar **Machine Learning**, **IA Generativa** e soluções em **Cloud** para impulsionar a estratégia de negócios e a eficiência operacional.
-#     </p>
-
-#     <div class="timeline-item">
-#         <h3 class="timeline-title">Experiência no Mercado Financeiro (1 Ano - Itaú)</h3>
-#         <p class="timeline-subtitle">Modelagem Preditiva, Engenharia de Dados e Automação</p>
-        
-#         <dl class="tech-list">
-#             <dt class="tech-category">Ações e Resultados-Chave</dt>
-#             <dd class="tech-detail">
-#                 Desenvolvimento de modelos de **Machine Learning** e análises com **SAS** e Big Data para decisões estratégicas.
-#             </dd>
-#             <dd class="tech-detail">
-#                 Construção e gerenciamento de *pipelines* robustos em **AWS** (S3, Glue, Step Functions), focando em escalabilidade e qualidade de dados.
-#             </dd>
-#             <dd class="tech-detail">
-#                 Criação de soluções de **automação** (Excel/VBA) e desenvolvimento *front-end* básico com **Javascript**.
-#             </dd>
-
-#             <dt class="tech-category">Tecnologias Principais</dt>
-#             <dd class="tech-detail">
-#                 <span class="tech-badge">Python (Pandas)</span>
-#                 <span class="tech-badge">PySpark</span>
-#                 <span class="tech-badge">SQL / MySQL</span>
-#                 <span class="tech-badge">SAS</span>
-#                 <span class="tech-badge">C</span>
-#                 <span class="tech-badge">AWS KIT</span>
-#                 <span class="tech-badge">Javascript</span>
-#             </dd>
-#         </dl>
-#     </div>
 
 #     <div class="timeline-item">
 #         <h3 class="timeline-title">Experiência Profissional com LLMs</h3>
@@ -161,96 +126,106 @@ st.markdown("""
 #             <span class="tech-badge">IA Generativa</span>
 #         </div>
 #     </div>
-# </section>
-# """
 #             , unsafe_allow_html=True)
 
 
 
 # --- Seção 1: Minha Trajetória em Dados & IA ---
-st.title("Felipe Borges | Portfólio de Dados & IA")
-
-st.write("---")
-
-# Variáveis
-MY_EMAIL = "seu.email@exemplo.com"
-MY_LINKEDIN_URL = "https:/linkedin.com/in/felipe-bmda/"
-
-st.markdown("""
-<style>
-    .btn-custom {
-        display: inline-flex; align-items: center; justify-content: center;
-        width: 100%; padding: 10px; margin-bottom: 10px;
-        border-radius: 12px; border: 1px solid #e0e0e0;
-        text-decoration: none; font-weight: 500; color: #333 !important;
-        transition: background 0.2s; background: #f8f9fa;
-    }
-    .btn-custom:hover { background: #eeeeee; border-color: #cccccc; }
-    .icon { margin-right: 8px; }
-</style>
-""", unsafe_allow_html=True)
-
-
-st.markdown("""
-<style>
-    .btn-custom {
-        display: inline-flex; align-items: center; justify-content: center;
-        width: 100%; padding: 10px; margin-bottom: 10px;
-        border-radius: 12px; border: 1px solid #e0e0e0;
-        text-decoration: none; font-weight: 500; color: #333 !important;
-        transition: background 0.2s; background: #f8f9fa;
-    }
-    .btn-custom:hover { background: #eeeeee; border-color: #cccccc; }
-    .icon { margin-right: 8px; }
-</style>
-""", unsafe_allow_html=True)
-
-# Botão Email
-st.markdown(f'''
-    <a href="mailto:{MY_EMAIL}" class="btn-custom">
-        <span class="icon">✉️</span> E-mail Profissional
-    </a>
-''', unsafe_allow_html=True)
-
-# Botão LinkedIn
-st.markdown(f'''
-    <a href="{MY_LINKED_URL}" target="_blank" class="btn-custom">
-        <span class="icon">🔗</span> LinkedIn
-    </a>
-''', unsafe_allow_html=True)
-
-# # --- Botão 3: WHATSAPP ---
-# st.markdown(
-# f"""
-# <a href="https://wa.me/{MY_WHATSAPP_NUM}" target="_blank" style="text-decoration: none;">
-#     <div style='
-#         background-color: #25D366; 
-#         color: white; 
-#         padding: 12px; 
-#         border-radius: 8px; 
-#         text-align: center; 
-#         font-size: 18px; 
-#         font-weight: bold;
-#         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-#         cursor: pointer;
-#     '>
-#         💬 WhatsApp (Rápido e Direto)
-#     </div>
-# </a>
-# """, 
-# unsafe_allow_html=True
-# )
-
-
-
+st.title("| Felipe Borges")
+st.header(" | Portfólio de Dados & IA")
 st.write("---")
 
 # Seção: Experiência no Itaú com storytelling
-st.header("🏦 Experiência no Itaú Unibanco")
+st.subheader("🏦 Experiência no Itaú Unibanco")
 
 st.markdown("""
-Durante meu estágio no Itaú, participei de projetos de **automação**, **engenharia de dados** e criei soluções que melhoraram a **eficiência operacional** da equipe. Abaixo estão alguns indicadores ilustrativos para representar esse impacto.
+Durante meu estágio no Itaú, participei de projetos de **automação**, **engenharia de dados** e criei soluções que melhoraram a eficiência operacional da equipe. Abaixo estão alguns indicadores 100% ilustrativos para representar esse impacto.
 """)
+
+
+# Seção de Certificado
+linha_1 = pula_linha()
+st.write("""<h2 style="text-align: center; font-size: 32px"; margin-top: 2em;>Certificados & Badges</h2> """, unsafe_allow_html=True)
+st.write("""<p style="text-align: center;">Conhecimento aprofundado e comprovado em IA Generativa.</p>""", unsafe_allow_html=True)
+linha_2 = pula_linha()
+
+cols = st.columns(4)
+urls = [
+    "./assets/Certificado_Batalha_de_Dados.png",
+    "./assets/Certificado_Praticioner_Generative_AI.png",
+    "./assets/Certificado_Quantum_Computing.png",
+    "./assets/Certificado_Business_Analytics.png"
+]
+captions = [
+    "Certificado de Evento **Hackaton Batalha de Dados**",
+    "Certificado em I.A. **Generativa Associate**",
+    "Certificado em **Computação Quântica**",
+    "Certificado em **Business Analytics**"
+]
+
+for col, url, caption in zip(cols, urls, captions):
+    with col:
+        st.image(url, caption=caption, width=300)
+
+
+st.write("---")
+
+st.subheader("Experiência Profissional com LLMs")
+st.markdown("""
+- **Modelagem Preditiva:** Utilizei **Machine Learning** com **SAS** e ferramentas de Big Data para prever tendências e comportamentos de mercado.
+- **Engenharia de Dados & Cloud:** Construí pipelines robustos com **PySpark** e o **AWS KIT (S3, Glue, Step Functions)** para automatizar a ingestão e o processamento de dados, **manipulando grandes volumes de dados no AWS Glue para garantir escalabilidade e eficiência.**
+- **Automação de Rotinas:** Desenvolvi soluções com **Excel/VBA** para otimizar fluxos de trabalho internos, liberando tempo para análises mais profundas.
+""")
+
+st.subheader("Especialização em IA Generativa")
+st.markdown("""
+- **IA Generativa Estratégica:** Apliquei **IA Generativa** para resolver e prever problemas de negócios. Utilizamos a arquitetura **RAG** para permitir que modelos tivessem acesso a manuais da empresa, garantindo resultados mais seguras e precisas.
+- **Desenvolvimento High-code & Low-code:** Tenho experiência prática com linguagens de programação**, como Python e Lua.
+- Experiência prática na aplicação de **RAG (Retrieval Augmented Generation)** utilizando a **API do modelo GPT 4.0**.
+- Hands-on experience on LangChain scripts and multimodel interfaces implementation (LLama, LLMs, Ollama), open-source models.
+""")
+
+
+# Seção: Habilidades técnicas organizadas
+st.header("Habilidades ")
+
+st.markdown("habilidades analíticas estão agrupadas em quatro áreas principais:")
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.subheader("🔧 Infraestrutura Cloud")
+    st.markdown("""
+    - AWS (Glue, S3, Athena)
+    - Microsoft Excel & VBA (Avançado)
+    - SQL, MySQL e PostgreSQL (integração SQL com Python) 
+    """)
+
+    st.subheader("📈 Dados & Análises")
+    st.markdown("""
+    - Criação de dashboards
+    - Análise, recuperação e tratamento de dados
+    - Relatórios de dados automatizados 
+    """)
+
+with col2:
+    st.subheader("💻 Programação")
+    st.markdown("""
+    - Python
+    - SQL
+    - Javascript
+    - C
+    - PySpark
+    - Bash
+    """)
+
+    st.subheader("🤖 Inteligência Artificial")
+    st.markdown("""
+    - Modelos Preditivos
+    - IA Generativa
+    - Transformers (RAG, etc.)
+    """)
+
 
 # KPIs simulados
 col1, col2, col3 = st.columns(3)
@@ -292,89 +267,6 @@ st.subheader("Resumo Estatístico")
 st.dataframe(df_vendas.describe().T.style.format("{:.1f}"))
 
 st.write("---")
-
-# Seção: Habilidades técnicas organizadas
-st.header("Habilidades ")
-
-st.markdown("Minhas habilidades estão agrupadas em quatro áreas principais:")
-
-col1, col2 = st.columns(2)
-
-with col1:
-    st.subheader("🔧 Infraestrutura Cloud")
-    st.markdown("""
-    - AWS (Glue, S3, Athena)
-    - Microsoft Excel & VBA (Avançado)
-    - SQL, MySQL e PostgreSQL (integração SQL com Python) 
-    """)
-
-    st.subheader("📈 Dados & Análises")
-    st.markdown("""
-    - Criação de dashboards
-    - Análise, recuperação e tratamento de dados
-    - Relatórios de dados automatizados 
-    """)
-
-with col2:
-    st.subheader("💻 Programação")
-    st.markdown("""
-    - Python
-    - SQL
-    - Javascript
-    - C
-    - PySpark
-    - Bash
-    """)
-
-    st.subheader("🤖 Inteligência Artificial")
-    st.markdown("""
-    - Modelos Preditivos
-    - IA Generativa
-    - Transformers (RAG, etc.)
-    """)
-
-st.write("---")
-
-st.subheader("Experiência Profissional com LLMs")
-st.markdown("""
-- **Modelagem Preditiva:** Utilizei **Machine Learning** com **SAS** e ferramentas de Big Data para prever tendências e comportamentos de mercado.
-- **Engenharia de Dados & Cloud:** Construí pipelines robustos com **PySpark** e o **AWS KIT (S3, Glue, Step Functions)** para automatizar a ingestão e o processamento de dados, **manipulando grandes volumes de dados no AWS Glue para garantir escalabilidade e eficiência.**
-- **Automação de Rotinas:** Desenvolvi soluções com **Excel/VBA** para otimizar fluxos de trabalho internos, liberando tempo para análises mais profundas.
-""")
-
-st.subheader("Especialização em IA Generativa")
-st.markdown("""
-- **IA Generativa Estratégica:** Apliquei **IA Generativa** para resolver problemas de negócio de forma inovadora. Utilizei a arquitetura **RAG** para permitir que modelos tivessem acesso a dados confidenciais e manuais da empresa, garantindo respostas seguras e precisas.
-- **Desenvolvimento High-code & Low-code:** Tenho experiência prática com linguagens de programação**.
-- Experiência prática na aplicação de **RAG (Retrieval Augmented Generation)** utilizando a **API do modelo GPT 4.0**.
-- Hands-on experience on LangChain scripts and multimodel interfaces implementation (LLama, LLMs, Ollama), open-source models.
-""")
-
-# Seção de Certificado
-linha_1 = pula_linha()
-st.write("""<h2 style="text-align: center; font-size: 32px"; margin-top: 2em;>Certificados & Badges</h2> """, unsafe_allow_html=True)
-st.write("""<p style="text-align: center;">Conhecimento aprofundado e comprovado em IA Generativa.</p>""", unsafe_allow_html=True)
-linha_2 = pula_linha()
-
-cols = st.columns(4)
-urls = [
-    "./assets/Certificado_Batalha_de_Dados.png",
-    "./assets/Certificado_Praticioner_Generative_AI.png",
-    "./assets/Certificado_Quantum_Computing.png",
-    "./assets/Certificado_Business_Analytics.png"
-]
-captions = [
-    "Certificado de Evento **Hackaton Batalha de Dados**",
-    "Certificado em I.A. **Generativa Associate**",
-    "Certificado em **Computação Quântica**",
-    "Certificado em **Business Analytics**"
-]
-
-for col, url, caption in zip(cols, urls, captions):
-    with col:
-        st.image(url, caption=caption, width=300)
-        
-
 
 # # --- Código HTML e CSS do rodapé
 # footer_html = f"""
