@@ -170,60 +170,54 @@ st.markdown("""
 # --- Seção 1: Minha Trajetória em Dados & IA ---
 st.title("Felipe Borges | Portfólio de Dados & IA")
 
-st.write("---") # Linha divisória
+st.write("---")
 
 # Variáveis
 MY_EMAIL = "seu.email@exemplo.com"
 MY_LINKEDIN_URL = "https:/linkedin.com/in/felipe-bmda/"
 
-st.header("Fale Comigo")
-st.subheader("Propostas | Parcerias | Dúvidas")
+st.markdown("""
+<style>
+    .btn-custom {
+        display: inline-flex; align-items: center; justify-content: center;
+        width: 100%; padding: 10px; margin-bottom: 10px;
+        border-radius: 12px; border: 1px solid #e0e0e0;
+        text-decoration: none; font-weight: 500; color: #333 !important;
+        transition: background 0.2s; background: #f8f9fa;
+    }
+    .btn-custom:hover { background: #eeeeee; border-color: #cccccc; }
+    .icon { margin-right: 8px; }
+</style>
+""", unsafe_allow_html=True)
 
-# --- Botão 1: EMAIL ---
-st.markdown(
-f"""
-<a href="mailto:{MY_EMAIL}" style="text-decoration: none;">
-    <div style='
-        background-color: #ff4b4b; 
-        color: white; 
-        padding: 12px; 
-        border-radius: 8px; 
-        text-align: center; 
-        font-size: 18px; 
-        font-weight: bold;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-        margin-bottom: 15px; 
-        cursor: pointer;
-    '>
-        ✉️ Email (Contato Formal)
-    </div>
-</a>
-""", 
-unsafe_allow_html=True
-)
 
-# --- Botão 2: LINKEDIN ---
-st.markdown(
-f"""
-<a href="{MY_LINKEDIN_URL}" target="_blank" style="text-decoration: none;">
-    <div style='
-        background-color: #0077B5; 
-        color: white; 
-        padding: 12px; 
-        border-radius: 8px; 
-        text-align: center; 
-        font-size: 18px; 
-        font-weight: bold;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-        margin-bottom: 15px; 
-        cursor: pointer;
-    '>
-        🔗 LinkedIn (Conexão Profissional)
-    </div>
-</a>
-""", 
-unsafe_allow_html=True
-)
+st.markdown("""
+<style>
+    .btn-custom {
+        display: inline-flex; align-items: center; justify-content: center;
+        width: 100%; padding: 10px; margin-bottom: 10px;
+        border-radius: 12px; border: 1px solid #e0e0e0;
+        text-decoration: none; font-weight: 500; color: #333 !important;
+        transition: background 0.2s; background: #f8f9fa;
+    }
+    .btn-custom:hover { background: #eeeeee; border-color: #cccccc; }
+    .icon { margin-right: 8px; }
+</style>
+""", unsafe_allow_html=True)
+
+# Botão Email
+st.markdown(f'''
+    <a href="mailto:{MY_EMAIL}" class="btn-custom">
+        <span class="icon">✉️</span> E-mail Profissional
+    </a>
+''', unsafe_allow_html=True)
+
+# Botão LinkedIn
+st.markdown(f'''
+    <a href="{MY_LINKED_URL}" target="_blank" class="btn-custom">
+        <span class="icon">🔗</span> LinkedIn
+    </a>
+''', unsafe_allow_html=True)
 
 # # --- Botão 3: WHATSAPP ---
 # st.markdown(
@@ -409,6 +403,7 @@ with col2:
     if st.button("Festejar a finalização do portfólio!"):
 
         st.balloons()
+
 
 
 
