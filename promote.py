@@ -187,7 +187,7 @@ st.markdown("""
 
 
 # Seção: Habilidades técnicas organizadas
-st.header("Habilidades ")
+st.header("Soft & Hard Skills ")
 
 st.markdown("habilidades analíticas estão agrupadas em quatro áreas principais:")
 
