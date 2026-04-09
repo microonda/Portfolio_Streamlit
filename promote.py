@@ -1,14 +1,13 @@
 import streamlit as st
 import time
 
-def pula_linha(quantas=1, pixels=40):
+def pula_linha(quantas=1, pixels=20):
     """
     Esta função pula linhas dentro de um site streamlit.
     quantas: Quantidade de linhas;
     pixels: Quanto espaço você quer pular; 
     """
-    for i in range(1, quantas+1):
-        st.markdown(f"""<div style="margin-top: {pixels}px"><div>""", unsafe_allow_html=True)
+    st.write(f"<div style='height: {pixels}px;'></div>" * quantas, unsafe_allow_html=True)
 
 
 st.set_page_config(
@@ -74,7 +73,7 @@ st.markdown("""
             padding: 2.5rem 1rem;
         }
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 5.5rem;
             margin-bottom: 1rem;
             margin-top: 1rem;
             font-weight: 700;
@@ -133,20 +132,11 @@ st.markdown("""
 # --- Seção 1: Minha Trajetória em Dados & IA ---
 st.title("| Felipe Borges")
 st.header(" | Portfólio de Dados & IA")
-st.write("---")
-
-# Seção: Experiência no Itaú com storytelling
-st.subheader("🏦 Experiência no Itaú Unibanco")
-
-st.markdown("""
-Durante meu estágio no Itaú, participei de projetos de **automação**, **engenharia de dados** e criei soluções que melhoraram a eficiência operacional da equipe. Abaixo estão alguns indicadores 100% ilustrativos para representar esse impacto.
-""")
-
+# st.write("---")
 
 # Seção de Certificado
-linha_1 = pula_linha()
 st.write("""<h2 style="text-align: center; font-size: 32px"; margin-top: 2em;>Certificados & Badges</h2> """, unsafe_allow_html=True)
-st.write("""<p style="text-align: center;">Conhecimento aprofundado e comprovado em IA Generativa.</p>""", unsafe_allow_html=True)
+st.write("""<p style="text-align: center;">Conhecimento aprofundado e comprovado em Inteligência Artificial.</p>""", unsafe_allow_html=True)
 linha_2 = pula_linha()
 
 cols = st.columns(4)
@@ -168,63 +158,55 @@ for col, url, caption in zip(cols, urls, captions):
         st.image(url, caption=caption, width=300)
 
 
-st.write("---")
-
-st.subheader("Experiência Profissional com LLMs")
-st.markdown("""
-- **Modelagem Preditiva:** Utilizei **Machine Learning** com **SAS** e ferramentas de Big Data para prever tendências e comportamentos de mercado.
-- **Engenharia de Dados & Cloud:** Construí pipelines robustos com **PySpark** e o **AWS KIT (S3, Glue, Step Functions)** para automatizar a ingestão e o processamento de dados, **manipulando grandes volumes de dados no AWS Glue para garantir escalabilidade e eficiência.**
-- **Automação de Rotinas:** Desenvolvi soluções com **Excel/VBA** para otimizar fluxos de trabalho internos, liberando tempo para análises mais profundas.
-""")
-
-st.subheader("Especialização em IA Generativa")
-st.markdown("""
-- **IA Generativa Estratégica:** Apliquei **IA Generativa** para resolver e prever problemas de negócios. Utilizamos a arquitetura **RAG** para permitir que modelos tivessem acesso a manuais da empresa, garantindo resultados mais seguras e precisas.
-- **Desenvolvimento High-code & Low-code:** Tenho experiência prática com linguagens de programação**, como Python e Lua.
-- Experiência prática na aplicação de **RAG (Retrieval Augmented Generation)** utilizando a **API do modelo GPT 4.0**.
-- Hands-on experience on LangChain scripts and multimodel interfaces implementation (LLama, LLMs, Ollama), open-source models.
-""")
-
 
 # Seção: Habilidades técnicas organizadas
 st.header("Soft & Hard Skills ")
 
-st.markdown("habilidades analíticas estão agrupadas em quatro áreas principais:")
+st.markdown("Habilidades analíticas estão agrupadas em quatro áreas principais:")
 
 col1, col2 = st.columns(2)
 
 with col1:
-    st.subheader("🔧 Infraestrutura Cloud")
+    st.subheader("📈 Dados")
     st.markdown("""
-    - AWS (Glue, S3, Athena)
-    - Microsoft Excel & VBA (Avançado)
-    - SQL, MySQL e PostgreSQL (integração SQL com Python) 
+    - Criação de dashboards automáticos
+    - Análise, governança e tratamento de dados
+    - Relatórios e planilhas automatizadas 
     """)
 
-    st.subheader("📈 Dados & Análises")
+    st.subheader("🔧 Computação em nuvem (cloud computing)")
     st.markdown("""
-    - Criação de dashboards
-    - Análise, recuperação e tratamento de dados
-    - Relatórios de dados automatizados 
+    - Amazon Web Services **[AWS]** (Glue, S3, Athena)
+    - Microsoft Excel Avançado & VBA (Automação de Planilhas)
+    - SQL, MySQL e PostgreSQL (Banco de Dados Relacional) 
     """)
 
 with col2:
-    st.subheader("💻 Programação")
+    st.subheader("💻 Programação & Desenvolvimento")
     st.markdown("""
     - Python
-    - SQL
-    - Javascript
-    - C
     - PySpark
-    - Bash
+    - SQL & MySQL
+    - C & C++
+    - Bash Scripting
+    - Lua
     """)
 
     st.subheader("🤖 Inteligência Artificial")
     st.markdown("""
-    - Modelos Preditivos
-    - IA Generativa
-    - Transformers (RAG, etc.)
+    - Modelos Preditivos e Machine Learning
+    - I.A Generativa
+    - Transformers (LLMs, RAG, RLHF etc.)
     """)
+
+
+# Seção: Experiência no Itaú com storytelling
+st.subheader("🏦 Experiência no Itaú Unibanco")
+
+st.markdown("""
+Durante meu estágio no Itaú, participei de projetos de **automação**, **engenharia de dados** e criei soluções que melhoraram a eficiência operacional da equipe. Abaixo estão alguns indicadores 100% ilustrativos para representar esse impacto.
+""")
+st.write("---")
 
 
 # KPIs simulados
@@ -237,10 +219,27 @@ with col2:
 with col3:
     st.metric("⏱️ Tempo Economizado", "120+ horas/mês", "↑ 35%")
 
+st.write("---")
+
+
+st.markdown("## Experiência Profissional com LLMs (Large Language Models)")
+st.write("**Modelagem Preditiva:** Utilizei **Machine Learning** e ferramentas de Big Data para prever tendências e comportamentos dos clientes.")
+st.write("**Engenharia de Dados & Cloud:** Construí pipelines robustos com **PySpark** e o Amazon Web Services (AWS), principalmente o **AWS KIT (S3, Glue, Step Functions)** para automatizar a ingestão e o processamento de dados, **manipulando grandes volumes de dados para garantir escalabilidade nos projetos.**")
+st.write("**Automação de Rotinas:** Desenvolvi soluções com **Excel/VBA** para otimizar fluxos de trabalho internos, automatizando tarefas repetitivas e melhorando a eficiência da equipe.")
+st.write("**Criação de Dashboards:** Criei dashboards interativos para monitorar Indicadores e facilitar a tomada de decisões estratégicas.")
+
+st.markdown("## Especialização em IA Generativa")
+st.write("""**Desenvolvimento High-code & Low-code:** Tenho experiência prática com linguagens de programação de baixo nível, como C, **Python e Lua.**""")
+st.write("""Experiência prática na aplicação de **RAG (Retrieval Augmented Generation)** utilizando a **API do modelo GPT 4.0**.""")
+st.write("""Hands-on experience on LangChain scripts and multimodel interfaces implementation (LLama, LLMs, Ollama) with **open-source models.**""")
+
+
+st.write("---")
+
 import pandas as pd
 import random
 
-st.title("Análise de Vendas por Categoria de Produto")
+st.title("Exemplo de planilha separada por Categoria de Produto")
 
 df = pd.DataFrame({
     "Produto": ["Smartphone", "Laptop", "Tablet", "Fones de Ouvido", "Câmera Digital", "Smartwatch"],
@@ -292,7 +291,7 @@ st.write("---")
 
 col1, col2, col3 = st.columns([1,2,1])
 with col2:
-    if st.button("Festejar a finalização do portfólio!"):
+    if st.button("Botão secreto do portfólio!"):
 
         st.balloons()
 
